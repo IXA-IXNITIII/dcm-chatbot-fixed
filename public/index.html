@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="th" class="light scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCM | หลักสูตรดิจิทัลคอนเทนต์และสื่อ ม.วลัยลักษณ์</title>
+    
+    <!-- ฟอนต์ Prompt (Modern & Clean) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Prompt', 'sans-serif'] },
+                    colors: {
+                        dcm: '#F97316', 
+                        dcmDark: '#EA580C',
+                        dcmLight: '#FFEDD5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-nav { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    </style>
+</head>
+<body class="bg-[#F8F9FA] dark:bg-[#0F172A] text-slate-800 dark:text-slate-200 transition-colors duration-500 font-sans selection:bg-dcm selection:text-white relative pb-24">
+
+    <!-- Ultra-Modern Navbar -->
+    <nav class="fixed top-4 left-0 right-0 z-40 mx-4 md:mx-auto max-w-6xl glass-nav bg-white/70 dark:bg-slate-900/70 border border-white/40 dark:border-slate-700/50 shadow-lg shadow-slate-200/20 dark:shadow-none rounded-full px-6 py-3 flex justify-between items-center transition-all">
+        <a href="#" class="shrink-0 flex items-center gap-3 hover:opacity-80 transition">
+            <img src="logo.png" alt="DCM Logo" class="h-20 w-auto rounded-xl shadow-sm">
+        </a>
+        
+        <div class="hidden md:flex gap-6 text-[15px] font-medium text-slate-600 dark:text-slate-300 items-center">
+            <a href="#about" class="hover:text-dcm transition">เกี่ยวกับ</a>
+            <a href="#bento-highlights" class="hover:text-dcm transition">จุดเด่น</a>
+            <a href="#curriculum" class="hover:text-dcm transition">หลักสูตร</a>
+            <a href="#career" class="hover:text-dcm transition">อาชีพ</a>
+            <a href="#contact" class="hover:text-dcm transition">สมัครเรียน</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <a href="https://entry.wu.ac.th/" target="_blank" class="hidden sm:flex bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-5 py-2 rounded-full text-sm font-semibold hover:scale-105 transition transform">
+                สมัครเลย
+            </a>
+            <!-- Circular Dark Mode Toggle -->
+            <button id="theme-toggle" class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center justify-center w-10 h-10 shadow-inner">
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="about" class="max-w-6xl mx-auto px-6 pt-36 pb-16 flex flex-col items-center text-center space-y-6">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100/50 dark:bg-orange-900/20 text-dcm text-sm font-semibold border border-orange-200 dark:border-orange-800/30">
+            <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span></span>
+            รับนักศึกษาทุกแผนการเรียน (70 คน/ปี)
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+            สร้างสรรค์อนาคตดิจิทัล<br>
+            <span class="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent">ด้วยตัวคุณเอง</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 max-w-2xl font-light">
+            หลักสูตรสารสนเทศศาสตรบัณฑิต สาขาดิจิทัลคอนเทนต์และสื่อ (DCM) มุ่งผลิตบัณฑิตผู้เชี่ยวชาญการใช้เทคโนโลยีสารสนเทศดิจิทัล พร้อมคุณธรรมและจริยธรรม
+        </p>
+    </header>
+
+    <!-- Bento Grid Highlights -->
+    <section id="bento-highlights" class="max-w-6xl mx-auto px-6 py-12 scroll-mt-24">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+            <!-- Box 1: Large -->
+            <div class="md:col-span-2 bg-white dark:bg-slate-800 rounded-[2.5rem] p-8 shadow-sm border border-slate-100 dark:border-slate-700/50 flex flex-col justify-end relative overflow-hidden group hover:shadow-lg transition">
+                <div class="absolute top-0 right-0 p-8 text-7xl opacity-5 group-hover:scale-110 transition duration-500">🏛️</div>
+                <h3 class="text-3xl font-extrabold mb-2 text-slate-900 dark:text-white">Digital GLAM</h3>
+                <p class="text-slate-500 dark:text-slate-400 font-light max-w-md">เชี่ยวชาญการจัดการคอนเทนต์กลุ่มหอศิลป์ ห้องสมุด หอจดหมายเหตุ และพิพิธภัณฑ์บนโลกดิจิทัล</p>
+            </div>
+            <!-- Box 2: Medium -->
+            <div class="bg-gradient-to-br from-orange-500 to-red-500 text-white rounded-[2.5rem] p-8 shadow-sm flex flex-col justify-between hover:shadow-lg hover:shadow-orange-500/20 transition transform hover:-translate-y-1">
+                <div class="text-4xl">💼</div>
+                <div>
+                    <h3 class="text-2xl font-extrabold mb-1">Co-op 8 เดือน</h3>
+                    <p class="text-orange-100 font-light text-sm">ปฏิบัติงานจริงในสถานประกอบการชั้นนำแบบเต็มเวลา</p>
+                </div>
+            </div>
+            <!-- Box 3: Medium -->
+            <div class="bg-slate-900 dark:bg-slate-950 text-white rounded-[2.5rem] p-8 shadow-sm flex flex-col justify-between border border-slate-800 hover:shadow-lg transition">
+                <div class="text-4xl">🌍</div>
+                <div>
+                    <h3 class="text-2xl font-extrabold mb-1">มาตรฐาน UKPSF</h3>
+                    <p class="text-slate-400 font-light text-sm">เรียนแบบ Active Learning ดูแลรายบุคคลตามมาตรฐานสากล</p>
+                </div>
+            </div>
+            <!-- Box 4: Large -->
+            <div class="md:col-span-2 bg-dcmLight dark:bg-slate-800/50 rounded-[2.5rem] p-8 shadow-sm border border-orange-100 dark:border-slate-700/50 flex flex-col justify-center items-start">
+                <h3 class="text-3xl font-extrabold mb-2 text-dcm">เลือกเรียนภาษาที่ใช่</h3>
+                <p class="text-slate-600 dark:text-slate-400 font-light">
+                    เพิ่มขีดความสามารถด้วยการเลือกเรียน <strong>ภาษาจีน</strong> หรือเลือกเรียนวิชาเฉพาะที่สอนเป็น <strong>ภาษาอังกฤษ 50%</strong> (ตั้งแต่ชั้นปีที่ 2)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Curriculum (Dashboard Style) -->
+    <section id="curriculum" class="max-w-6xl mx-auto px-6 py-12 scroll-mt-24">
+        <div class="flex flex-col md:flex-row gap-8 bg-white dark:bg-slate-800 rounded-[2.5rem] p-8 md:p-10 shadow-sm border border-slate-100 dark:border-slate-700/50">
+            <!-- Sidebar Navigation for Years -->
+            <div class="md:w-1/3 space-y-4 border-r border-slate-100 dark:border-slate-700 pr-4 flex md:flex-col overflow-x-auto hide-scrollbar">
+                <div class="mb-4 hidden md:block">
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">โครงสร้าง<br>123 หน่วยกิต</h2>
+                </div>
+                <button onclick="switchYear(1)" id="btn-y1" class="year-btn w-full text-left px-6 py-4 rounded-2xl font-bold transition bg-slate-900 dark:bg-white text-white dark:text-slate-900 shrink-0">ปี 1 : ปูพื้นฐาน</button>
+                <button onclick="switchYear(2)" id="btn-y2" class="year-btn w-full text-left px-6 py-4 rounded-2xl font-bold transition text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50 shrink-0">ปี 2 : ทักษะวิชาชีพ</button>
+                <button onclick="switchYear(3)" id="btn-y3" class="year-btn w-full text-left px-6 py-4 rounded-2xl font-bold transition text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50 shrink-0">ปี 3 : วิชาเอก & UX/UI</button>
+                <button onclick="switchYear(4)" id="btn-y4" class="year-btn w-full text-left px-6 py-4 rounded-2xl font-bold transition text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50 shrink-0">ปี 4 : ประสบการณ์จริง</button>
+            </div>
+            
+            <!-- Content Area -->
+            <div class="md:w-2/3 flex flex-col justify-center">
+                <div id="year-content" class="animate-fade-in space-y-4">
+                    <div class="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-dcm rounded-full text-xs font-bold mb-2">ภาคการศึกษา 1 & 2</div>
+                    <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">ปรับพื้นฐานการรู้ดิจิทัลและการออกแบบ</h3>
+                    <p class="text-slate-500 dark:text-slate-400 font-light leading-relaxed">
+                        เน้นการปรับพื้นฐานทางภาษา การรู้ดิจิทัล (Digital Literacy) การคิดสร้างสรรค์เพื่อการออกแบบสื่อ การเขียนเพื่อสร้างสรรค์ดิจิทัลคอนเทนต์ และพื้นฐานการสร้างสรรค์ภาพดิจิทัล
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Path (Minimalist Tags) -->
+    <section id="career" class="max-w-6xl mx-auto px-6 py-12 scroll-mt-24">
+        <h2 class="text-3xl font-extrabold mb-8 text-center text-slate-900 dark:text-white">เส้นทางอาชีพหลังเรียนจบ</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+            <div class="px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full font-medium shadow-sm hover:border-dcm transition cursor-default">✨ Digital Content Creator</div>
+            <div class="px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full font-medium shadow-sm hover:border-dcm transition cursor-default">🌐 Web Content Manager</div>
+            <div class="px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full font-medium shadow-sm hover:border-dcm transition cursor-default">🎨 Web Designer & UX/UI</div>
+            <div class="px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full font-medium shadow-sm hover:border-dcm transition cursor-default">🗂️ Digital Collection Developer</div>
+            <div class="px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full font-medium shadow-sm hover:border-dcm transition cursor-default">📈 Content Specialist</div>
+        </div>
+    </section>
+
+    <!-- Modern Contact / CTA -->
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-12 scroll-mt-24">
+        <div class="bg-slate-900 dark:bg-black text-white rounded-[3rem] p-10 md:p-16 text-center space-y-8 relative overflow-hidden shadow-2xl">
+            <!-- Decorative blur -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-orange-500/30 blur-[100px] rounded-full pointer-events-none"></div>
+            
+            <h2 class="text-4xl md:text-5xl font-extrabold relative z-10">พร้อมที่จะเริ่มเดินทางไปกับเรา?</h2>
+            <p class="text-slate-400 max-w-xl mx-auto font-light relative z-10">
+                ยื่นแฟ้มสะสมผลงาน (Portfolio) เกรดเฉลี่ยขั้นต่ำ 2.75<br>
+                ค่าธรรมเนียมการศึกษา 25,000 บาท/เทอม
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+                <a href="https://entry.wu.ac.th/" target="_blank" class="bg-dcm hover:bg-dcmDark text-white px-8 py-4 rounded-full font-bold shadow-lg shadow-orange-500/20 transition transform hover:-translate-y-1">
+                    เข้าสู่ระบบสมัครเรียน
+                </a>
+                <a href="https://informatics.wu.ac.th/bachelors-degree/digital-content-and-media/" target="_blank" class="bg-white/10 hover:bg-white/20 text-white backdrop-blur-md px-8 py-4 rounded-full font-bold transition border border-white/10">
+                    ดูหน้าหลักสูตรทางการ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating AI Chatbot Widget -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        
+        <!-- Chat Window (Toggleable) -->
+        <div id="chat-window" class="hidden w-[90vw] sm:w-[380px] h-[550px] bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl rounded-[2rem] shadow-2xl flex flex-col overflow-hidden mb-4 border border-slate-200 dark:border-slate-700 transition-all duration-300 origin-bottom-right">
+            
+            <!-- Header -->
+            <div class="bg-slate-50 dark:bg-slate-800 p-5 flex justify-between items-center border-b border-slate-100 dark:border-slate-700">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-tr from-orange-500 to-pink-500 rounded-full flex items-center justify-center text-white shadow-sm">
+                        🤖
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 dark:text-white leading-tight">DCM Assistant</h3>
+                        <p class="text-[11px] text-green-500 font-medium">● Online</p>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white transition bg-slate-200 dark:bg-slate-700 p-2 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            
+            <!-- Chat Area -->
+            <div id="chat-box" class="flex-1 p-5 overflow-y-auto flex flex-col gap-4 text-sm bg-transparent scroll-smooth">
+                <div class="bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 p-4 rounded-2xl rounded-tl-sm max-w-[85%] self-start shadow-sm font-light">
+                    สวัสดีครับ! ผมคือผู้ช่วย AI ของสาขา DCM มีคำถามเกี่ยวกับการเรียนการสอน การสมัคร หรือวิชาโท พิมพ์มาได้เลยครับ ✨
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="p-4 bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+                <div class="flex gap-2 bg-slate-50 dark:bg-slate-800 rounded-full p-1.5 border border-slate-200 dark:border-slate-700 focus-within:ring-2 focus-within:ring-dcm/50 transition">
+                    <input type="text" id="user-input" class="flex-1 bg-transparent text-slate-800 dark:text-white px-4 py-2 focus:outline-none text-sm w-full font-light" placeholder="ถามอะไรดี?">
+                    <button onclick="sendMessage()" class="bg-dcm hover:bg-dcmDark text-white w-10 h-10 rounded-full flex items-center justify-center transition transform hover:scale-105 shrink-0 shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform rotate-90 translate-x-px" viewBox="0 0 20 20" fill="currentColor"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Button -->
+        <button id="chat-toggle-btn" onclick="toggleChat()" class="bg-slate-900 dark:bg-white text-white dark:text-slate-900 w-14 h-14 rounded-full shadow-2xl shadow-slate-900/20 flex items-center justify-center transition transform hover:scale-110 relative">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+            <span class="absolute top-0 right-0 flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-dcm opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-dcm"></span>
+            </span>
+        </button>
+    </div>
+    
+    <script>
+        // --- Theme Toggle ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        const sunIcon = `<svg class="h-5 w-5 text-orange-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 4.22a1 1 0 011.415 0l.884.884a1 1 0 01-1.414 1.415l-.884-.884a1 1 0 010-1.415zM1 10a1 1 0 011-1h1a1 1 0 110 2H2a1 1 0 01-1-1zm15 0a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1zM7.05 16.95a1 1 0 001.415 0l.884-.884a1 1 0 00-1.415-1.415l-.884.884a1 1 0 000 1.415zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4.22-4.22a1 1 0 011.415 0l.884.884a1 1 0 01-1.414 1.415l-.884-.884a1 1 0 010-1.415zM10 5a5 5 0 100 10 5 5 0 000-10z" clip-rule="evenodd" /></svg>`;
+        const moonIcon = `<svg class="h-5 w-5 text-slate-500" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg>`;
+
+        themeToggleBtn.innerHTML = htmlElement.classList.contains('dark') ? sunIcon : moonIcon;
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            themeToggleBtn.innerHTML = htmlElement.classList.contains('dark') ? sunIcon : moonIcon;
+        });
+
+        // --- Chatbot Toggle ---
+        function toggleChat() {
+            document.getElementById('chat-window').classList.toggle('hidden');
+        }
+
+        // --- Send Message ---
+        // สร้างกล่องข้อความด้วย textContent (ปลอดภัยจาก XSS) และรักษาการขึ้นบรรทัดใหม่
+        function addMessage(text, classes, id) {
+            const chatBox = document.getElementById("chat-box");
+            const div = document.createElement('div');
+            div.className = classes;
+            div.style.whiteSpace = 'pre-wrap';
+            if (id) div.id = id;
+            div.textContent = text;
+            chatBox.appendChild(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
+            return div;
+        }
+
+        const USER_CLASS = "bg-dcm text-white px-4 py-3 rounded-2xl rounded-tr-sm max-w-[85%] self-end shadow-sm font-light";
+        const BOT_CLASS = "bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-2xl rounded-tl-sm max-w-[85%] self-start shadow-sm font-light";
+        const ERR_CLASS = "bg-red-50 text-red-500 px-4 py-3 rounded-2xl rounded-tl-sm max-w-[85%] self-start";
+
+        async function sendMessage() {
+            const inputField = document.getElementById("user-input");
+            const message = inputField.value.trim();
+            if (!message) return;
+
+            addMessage(message, USER_CLASS);
+            inputField.value = "";
+
+            const chatBox = document.getElementById("chat-box");
+            const typingId = "typing-" + Date.now();
+            const typing = document.createElement('div');
+            typing.id = typingId;
+            typing.className = "text-slate-400 text-xs self-start px-2 py-1 flex items-center gap-1";
+            typing.innerHTML = '<span class="animate-bounce">●</span><span class="animate-bounce" style="animation-delay: 0.1s">●</span><span class="animate-bounce" style="animation-delay: 0.2s">●</span>';
+            chatBox.appendChild(typing);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            try {
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message })
+                });
+                const data = await response.json();
+                typing.remove();
+                addMessage(data.reply || 'ขออภัย ไม่ได้รับคำตอบ กรุณาลองใหม่อีกครั้งครับ', response.ok ? BOT_CLASS : ERR_CLASS);
+            } catch (error) {
+                typing.remove();
+                addMessage('เกิดข้อผิดพลาดในการเชื่อมต่อ', ERR_CLASS);
+            }
+        }
+
+        document.getElementById("user-input").addEventListener("keypress", (e) => {
+            if (e.key === "Enter") sendMessage();
+        });
+
+        // --- Interactive Curriculum JS ---
+        function switchYear(year) {
+            const content = {
+                1: { title: "ปรับพื้นฐานการรู้ดิจิทัลและการออกแบบ", desc: "เน้นการปรับพื้นฐานทางภาษา การรู้ดิจิทัล (Digital Literacy) การคิดสร้างสรรค์เพื่อการออกแบบสื่อ การเขียนเพื่อสร้างสรรค์ดิจิทัลคอนเทนต์ และพื้นฐานการสร้างสรรค์ภาพดิจิทัล", tag: "ภาคการศึกษา 1 & 2" },
+                2: { title: "เจาะลึกทักษะวิชาชีพสารสนเทศและบริการ", desc: "เรียนรู้การจัดหมวดหมู่ดิจิทัลคอนเทนต์ การออกแบบบริการดิจิทัลสำหรับองค์กร (Service Design) รวมถึงการเขียนโปรแกรมและการออกแบบฐานข้อมูล", tag: "ภาคการศึกษา 1 & 2" },
+                3: { title: "ต่อยอดความเชี่ยวชาญ และสร้างสรรค์โปรเจกต์", desc: "เน้นการออกแบบ UX/UI การพัฒนาเว็บไซต์ และเริ่มต้นเรียนรู้รายวิชาโท (Minor) ตามความสนใจ พร้อมจัดทำโครงงานก่อนออกสหกิจ", tag: "ภาคการศึกษา 1 & 2" },
+                4: { title: "ลงสนามจริง สหกิจศึกษา 8 เดือน", desc: "รายวิชา DCM67-491 และ DCM67-492 สหกิจศึกษา 1 และ 2 ปฏิบัติงานจริงเต็มเวลาในสถานประกอบการชั้นนำทั้งในและต่างประเทศ", tag: "สหกิจศึกษา" }
+            };
+
+            // อัปเดตปุ่ม
+            document.querySelectorAll('.year-btn').forEach(btn => {
+                btn.className = "year-btn w-full text-left px-6 py-4 rounded-2xl font-bold transition text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-700/50 shrink-0";
+            });
+            const activeBtn = document.getElementById('btn-y' + year);
+            activeBtn.className = "year-btn w-full text-left px-6 py-4 rounded-2xl font-bold transition bg-slate-900 dark:bg-white text-white dark:text-slate-900 shrink-0 shadow-md";
+
+            // อัปเดตเนื้อหา
+            const box = document.getElementById('year-content');
+            box.style.opacity = 0;
+            setTimeout(() => {
+                box.innerHTML = `
+                    <div class="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-dcm rounded-full text-xs font-bold mb-2">${content[year].tag}</div>
+                    <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">${content[year].title}</h3>
+                    <p class="text-slate-500 dark:text-slate-400 font-light leading-relaxed">${content[year].desc}</p>
+                `;
+                box.style.opacity = 1;
+            }, 150);
+        }
+    </script>
+</body>
+</html>
